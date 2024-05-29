@@ -1,0 +1,42 @@
+let largura = 450
+let altura = 300
+let xbolinha = 200
+let ybolinha = 200
+let xraquete = 5
+let yraquete = altura/2
+let xraqueteop = 440
+let yraqueteop = altura/2
+let raquetelarg = 5
+let raquetealt = 100
+let diametro = 30
+let raio = diametro/2
+let xvelocidade = 5
+let yvelocidade = 5
+let yvelocidadeop ;
+let colidiu = false
+let minhapontuacao = 0
+let pontuacaoop = 0
+
+function setup() {
+  createCanvas(largura, altura);
+}
+
+function draw() {
+  background(0);
+  createcircle();
+  movimentobolinha();
+  bateevolta();
+  criaraquete();
+  sobedesce();
+  colisaoraquete(); 
+  criaraqueteop();
+  movimentoop();
+  colisaoraqueteop();
+  criaplacar();
+  marcaponto();
+}
+function createcircle() {
+  circle(xbolinha,ybolinha,diametro)
+}
+function movimentobolinha() {
+  xbolinha += xvelocidade
